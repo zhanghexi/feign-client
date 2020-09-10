@@ -1,6 +1,5 @@
 package com.example.consumer.feign.controller;
 
-import com.alibaba.csp.sentinel.annotation.SentinelResource;
 import com.alibaba.fastjson.JSON;
 import com.example.consumer.feign.EmployeeFeignService;
 import com.example.consumer.feign.model.EmployeeDTO;
@@ -34,7 +33,6 @@ public class EmployeeConsumerController {
 
     @ApiOperation(value = "调用查询员工信息列表Feign接口的返回值", notes = "Feign接口测试")
     @GetMapping(value = "/queryEmpListByFeignApi/{empName}")
-    /*@SentinelResource("queryEmpListByFeignApi")*/
     public List<EmployeeDTO> getEmpInfoByEmpName(@PathVariable("empName") String empName) {
         List<EmployeeDTO> employeeDTOS = employeeFeignService.queryEmpListByFeignApi(empName);
         log.info(JSON.toJSONString(employeeDTOS));
