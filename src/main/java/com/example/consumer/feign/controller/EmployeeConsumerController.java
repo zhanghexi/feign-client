@@ -1,6 +1,6 @@
 package com.example.consumer.feign.controller;
 
-import com.example.consumer.feign.EmployeeFeignService;
+import com.example.consumer.feign.api.EmployeeFeignService;
 import com.example.consumer.feign.model.EmployeeDTO;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
