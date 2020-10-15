@@ -8,4 +8,7 @@ spring:
       config:
         server-addr: 192.168.93.132:8848
         file-extension: yaml
-        enabled: true
+        #在此指定共享配置
+        shared-configs[0]:
+          data-Id: oracle-emp.yaml
+          refresh: true

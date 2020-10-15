@@ -1,13 +1,10 @@
+server:
+  port: 8098
 spring:
   application:
     name: feign-client
   cloud:
-    nacos:
-      discovery:
-        server-addr: 192.168.93.132:8848
     sentinel:
-#      filter:
-#        enabled: true
       transport:
         dashboard: 192.168.93.132:8099
         port: 8719
@@ -19,8 +16,3 @@ management:
 feign:
   sentinel:
     enabled: true
-server:
-  port: 8098
-logging:
-  level:
-    root: info
