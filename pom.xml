@@ -62,7 +62,7 @@
         <!--引入api模块-->
         <dependency>
             <groupId>org.example</groupId>
-            <artifactId>spring-cloud-alibaba-nacos-consumer-feignapi</artifactId>
+            <artifactId>alibaba-nacos-consumer-api</artifactId>
             <version>1.0.0</version>
         </dependency>
         <!--注册到nacos-->
