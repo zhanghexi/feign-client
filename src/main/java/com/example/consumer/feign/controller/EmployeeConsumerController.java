@@ -31,7 +31,6 @@ public class EmployeeConsumerController {
     @ApiOperation(value = "调用查询员工信息列表Feign接口的返回值", notes = "Feign接口测试")
     @GetMapping(value = "/queryEmpListByFeignApi/{empName}")
     public List<EmployeeDTO> getEmpInfoByEmpName(@PathVariable("empName") String empName) {
-        List<EmployeeDTO> employeeDTOS = employeeFeignService.queryEmpListByFeignApi(empName);
-        return employeeDTOS;
+        return employeeFeignService.queryEmpListByFeignApi(empName);
     }
 }

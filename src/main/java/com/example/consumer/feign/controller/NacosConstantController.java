@@ -26,7 +26,6 @@ public class NacosConstantController {
     @ApiOperation(value = "获取Nacos共享变量接口的返回值", notes = "Feign接口测试")
     @GetMapping(value = "/getNacosConstant")
     public String getNacosConstant() {
-        String nacosConstant = nacosConfigConstantFeignService.getNacosConstant();
-        return nacosConstant;
+        return nacosConfigConstantFeignService.getNacosConstant();
     }
 }

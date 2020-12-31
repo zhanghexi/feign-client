@@ -8,10 +8,13 @@
         <version>2.2.4.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
+
     <groupId>com.consumer</groupId>
-    <artifactId>feign-client</artifactId>
+    <artifactId>lucien-comsumer-feign-client</artifactId>
     <version>1.0.0</version>
-    <name>feign-client</name>
+    <packaging>jar</packaging>
+
+    <name>lucien-comsumer-feign-client</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
@@ -19,6 +22,12 @@
     </properties>
 
     <dependencies>
+        <!--引入api模块-->
+        <dependency>
+            <groupId>org.example</groupId>
+            <artifactId>lucien-nacos-consumer-feign-api</artifactId>
+            <version>1.0.0</version>
+        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -59,12 +68,6 @@
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
         </dependency>
-        <!--引入api模块-->
-        <dependency>
-            <groupId>org.example</groupId>
-            <artifactId>alibaba-nacos-consumer-api</artifactId>
-            <version>1.0.0</version>
-        </dependency>
         <!--注册到nacos-->
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
@@ -95,6 +98,13 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
