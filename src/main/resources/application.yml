@@ -2,7 +2,7 @@ server:
   port: 8098
 spring:
   application:
-    name: feign-client
+    name: nacos-consumer
   cloud:
     sentinel:
       transport:
